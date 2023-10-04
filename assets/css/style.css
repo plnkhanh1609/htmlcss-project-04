@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Sora:wght@600;700;800&display=swap");
+/* Common */
+:root {
+    --primary-color: #5e6085;
+    --secondary-color: #000958;
+}
 * {
     box-sizing: border-box;
 }
@@ -8,6 +13,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
 }
 h1,
 h2,
@@ -23,4 +29,67 @@ button,
 select {
     font-size: inherit;
     font-family: inherit;
+    color: inherit;
+}
+.btn {
+    --height: 56px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 110px;
+    border: 1px solid;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 999px;
+    font-weight: 600;
+}
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    padding: 26px 0;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__item {
+    font-size: 1.4rem;
+}
+.navbar__link.active {
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--secondary-color);
+}
+.navbar__link:hover {
+    /* font-weight: 600; Làm giật nav */
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--secondary-color);
+}
+
+.navbar__link,
+.header-action__link {
+    padding: 9px 18px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.header-action__btn {
+    --height: 50px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    min-width: 117px;
+    border: 1px solid rgb(0, 9, 88, 0.7);
+    color: var(--secondary-color);
 }
